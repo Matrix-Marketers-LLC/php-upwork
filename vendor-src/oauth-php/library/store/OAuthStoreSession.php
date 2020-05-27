@@ -109,6 +109,7 @@ class OAuthStoreSession extends OAuthStoreAbstract
 			'request_token_uri' => $this->session['request_token_uri'],
 			'authorize_uri' => $this->session['authorize_uri'],
 			'access_token_uri' => $this->session['access_token_uri'],
+			'redirect_uri' => $this->session['redirect_uri'],
 		);
 	}
 	
