@@ -67,6 +67,10 @@ final class Config
      * @var Debug mode
      */
     static private $_debug = false;
+    /**
+	* @var Redirect URL
+	*/
+	static private $_redirect = '';
 
     /**
      * Constructor
