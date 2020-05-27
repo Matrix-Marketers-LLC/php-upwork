@@ -55,6 +55,7 @@ class OAuthStoreSession extends OAuthStoreAbstract
 			$this->session['request_token_uri'] = $options['request_token_uri'];
 			$this->session['authorize_uri'] = $options['authorize_uri'];
 			$this->session['access_token_uri'] = $options['access_token_uri']; 
+			$this->session['redirect_uri'] = $options['redirect_uri'];
 			
 		}
 		else
