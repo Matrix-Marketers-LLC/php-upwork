@@ -132,6 +132,9 @@ class OAuthRequestSigner extends OAuthRequest
 			$this->setParam('oauth_token', 		 $token);
 		$this->setParam('oauth_consumer_key',	 $secrets['consumer_key']);
 		$this->setParam('oauth_version',		 '1.0');
+		if (!empty($secrets['redirect_uri'])) {
+			$this->setParam('oauth_callback', $secrets['redirect_uri']);
+		}
 		
 		$body = $this->getBody();
 		if (!is_null($body))
