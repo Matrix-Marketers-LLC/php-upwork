@@ -145,7 +145,8 @@ final class OAuthPHPLib extends AbstractOAuth implements ApiClient
             'server_uri' => UPWORK_BASE_URL,
             'request_token_uri' => ApiUtils::getFullUrl(self::URL_RTOKEN, 'api'),
             'authorize_uri' => self::URL_AUTH,
-            'access_token_uri' => ApiUtils::getFullUrl(self::URL_ATOKEN, 'api')
+            'access_token_uri' => ApiUtils::getFullUrl(self::URL_ATOKEN, 'api'),
+            'redirect_uri' => self::$_redirect_uri,
         );
         
         $oauth = \OAuthStore::instance('Session', $options);
