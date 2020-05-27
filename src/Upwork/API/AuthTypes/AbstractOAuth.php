@@ -72,6 +72,12 @@ abstract class AbstractOAuth
      * @var Signature method
      */
     static protected $_sigMethod = 'HMAC-SHA1';
+    
+    /**
+	 * @var redirect uri
+	 */
+	static protected $_redirect_uri = null;
+	
 
     /**
      * Constructor 
