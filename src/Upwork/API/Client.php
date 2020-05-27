@@ -50,11 +50,13 @@ class Client
         $aToken     = $config::get('accessToken');
         $aSecret    = $config::get('accessSecret');
         $verifySsl  = $config::get('verifySsl');
+        $redirect_uri  = $config::get('redirect');
         $auth       = 'Upwork\API\AuthTypes\\' . $config::get('authType');
 
         $this->_server = new $auth($key, $secret);
         !$aToken  || $this->_server->option('accessToken', $aToken);
         !$aSecret || $this->_server->option('accessSecret', $aSecret);
+        !$redirect_uri || $this->_server->option('redirect_uri', $redirect_uri);
         $this->_server->option('verifySsl', $verifySsl);
     }
 
