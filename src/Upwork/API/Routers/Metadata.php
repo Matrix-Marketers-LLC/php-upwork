@@ -101,6 +101,16 @@ final class Metadata extends ApiClient
 
         return $response;
     }
+    
+    public function getSpecialtiesV2($category_id)
+    {
+        ApiDebug::p(__FUNCTION__);
+
+        $response = $this->_client->get('/profiles/v1/metadata/specialties', array('topic' => $category_id));
+        ApiDebug::p('found response info', $response);
+
+        return $response;
+    }
 
     /**
      * Get regions
