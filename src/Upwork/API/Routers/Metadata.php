@@ -77,15 +77,19 @@ final class Metadata extends ApiClient
      *
      * @return object
      */
-    public function getSkillsV2()
+    public function getSkillsV2($specality_id = null)
     {
         ApiDebug::p(__FUNCTION__);
+        $params = array();
+        if(!empty($specality_id)) {
+            $params = array('specialty' => $specality_id);
+        }  
 
-        $response = $this->_client->get('/profiles/v2/metadata/skills');
+        $response = $this->_client->get('/profiles/v2/metadata/skills',$params);
         ApiDebug::p('found response info', $response);
 
         return $response;
-    }
+     }
 
     /**
      * Get Specialties
